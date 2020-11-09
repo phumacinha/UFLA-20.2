@@ -5,4 +5,10 @@
 # Unignore all dirs
 !*/
 
+# Ignore VSCode
+.vscode/
+
+# Local History for Visual Studio Code
+.history/
+
 *.o
