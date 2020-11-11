@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Meta tags requeridas -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/4.1.3/css/bootstrap.min.css">
+    <!-- CSS da fonte Nunito-->
+    <link href="assets/fonts/Nunito/css2.css" rel="stylesheet">
+    <!-- CSS com estilos gerais da página -->
+    <link rel="stylesheet" href="assets/other/css/style.css">
+
+    <title>Membros da empresa</title>
+</head>
+
+<body class="bg-light text-body small">
+
+    
+    <!-- Início conteúdo-->
+    <div class="container">
+        <!-- Início do cabeçalho de conteúdo -->
+        <div class="d-flex align-items-center py-3 px-3" id="cabecalhoPagina">
+            <div class="col-titulo-membros pr-4" id="titulo">Membros da empresa</div>
+            <div class="flex-grow-1">
+                <input class="btn btn-primary btn-sm font-weight-bold" data-toggle="modal" data-target="#modalFormulario" data-action="adicionar" type="button" value="Adicionar membro">
+            </div>
+            <div class="col-total-membros">Total de membros: <span class="text-dark" id="totalMembros"></span></div>
+        </div>
+        <!-- Fim do cabeçalho de conteúdo -->
+
+        <!-- Início da tabela -->
+        <div class="table-responsive-xl bg-white px-3 rounded shadow-sm">
+            <table class="table table text-nowrap" id="tabelaMembros">
+                <thead>
+                    <tr class="align-middle">
+                        <th class="border-0" scope="col">Nome completo</th>
+                        <th class="border-0" scope="col">Cargo</th>
+                        <th class="border-0" scope="col">Email</th>
+                        <th class="border-0" scope="col">Data de admissão</th>
+                        <th class="border-0 text-center" scope="col">Opções</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td class="align-middle" data-campo="nome">Pedro Antônio de Souza</td>
+                        <td class="align-middle" data-campo="cargo">Backend Developer</td>
+                        <td class="align-middle" data-campo="email">pedro.souza2@estudante.ufla.br</td>
+                        <td class="align-middle" data-campo="admissao">27/10/2019</td>
+                        <td class="align-middle text-center">
+                            <input class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalFormulario" data-action="editar" type="button" value="Editar">
+                            <input class="btn btn-outline-danger btn-sm remover" type="button" value="Remover">
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td class="align-middle" data-campo="nome">Gabriela de Almeida Pontes</td>
+                        <td class="align-middle" data-campo="cargo">Professora Universitária</td>
+                        <td class="align-middle" data-campo="email">gabriela.pontes@estudante.ufla.br</td>
+                        <td class="align-middle" data-campo="admissao">21/01/2020</td>
+                        <td class="align-middle text-center">
+                            <input class="btn btn-outline-primary btn-sm" data-toggle="modal" data-target="#modalFormulario" data-action="editar" type="button" value="Editar">
+                            <input class="btn btn-outline-danger btn-sm remover" type="button" value="Remover">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- Fim da tabela -->
+    </div>
+    <!-- Fim conteúdo -->
+
+    <!-- Início modal -->
+    <div class="modal" id="modalFormulario" tabindex="-1" role="dialog" aria-labelledby="rotuloModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="rotuloModal"></h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <form id="formulario" autocomplete="off">
+                <div class="modal-body">
+                
+
+                    <div class="form-group">
+                        <label for="nome" class="col-form-label">Nome completo:</label>
+                        <input type="text" class="form-control" name="nome" id="nome" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cargo" class="col-form-label">Cargo:</label>
+                        <input type="text" class="form-control" name="cargo" id="cargo" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="col-form-label">Email:</label>
+                        <input type="email" class="form-control" name="email" id="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="admissao" class="col-form-label">Data de admissao:</label>
+                        <input type="date" class="form-control" name="admissao" id="admissao" required>
+                    </div>
+
+                    <input type="hidden" id="idRegistro" name="idRegistro" value="-1" required>
+
+                
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-sm btn-outline-danger" data-dismiss="modal">Descartar</button>
+                    <input type="submit" class="btn btn-primary" id="submit" value="">
+                </div>
+            </form>
+          </div>
+        </div>
+    </div>
+    <!-- Fim modal -->
+
+    <!-- Início arquivos Javascript de terceiros -->
+    <script src="assets/jquery/3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="assets/popper.js/1.14.3/popper.min.js"></script>
+    <script src="assets/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <!-- Fim arquivos Javascript de terceiros -->
+
+    <script src="assets/other/js/script.js"></script>
+</body>
+</html>
