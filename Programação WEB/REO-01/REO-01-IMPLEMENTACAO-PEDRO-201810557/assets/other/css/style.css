@@ -1,0 +1,36 @@
+:root {
+    --cinza: #a6a6a6;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 600;
+}
+
+/* Início cabeçalho de conteúdo */
+#cabecalhoPagina .col-titulo-membros {
+    font-size: 2.5em;
+    font-weight: 900;
+}
+
+#cabecalhoPagina .col-total-membros {
+    color: var(--cinza);
+    font-weight: 800;
+}
+/* Fim cabeçalho de conteúdo */
+
+/* Início da tabela */
+#tabelaMembros thead tr th {
+    color: var(--cinza);
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+#tabelaMembros tbody tr td {
+    font-size: 1em;
+}
+
+#tabelaMembros tbody tr td input.btn-sm {
+    font-size: .9em;
+}
+/* Fim da tabela */
