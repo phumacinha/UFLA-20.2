@@ -25,7 +25,7 @@ import org.json.JSONObject;
 public class ContatoServlet extends HttpServlet {
     // Requisição POST cria contato no banco de dados
     @Override
-    protected void doPost(HttpServletRequest request, 
+    public void doPost(HttpServletRequest request, 
             HttpServletResponse response) throws IOException, ServletException {
         
         // Buscando parametros no request

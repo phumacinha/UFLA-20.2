@@ -1,0 +1,8 @@
+-------------------------------------------------------------------------------
+Test set: agenda.jdbc.dao.ContatoDaoTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.836 sec <<< FAILURE! - in agenda.jdbc.dao.ContatoDaoTest
+testAdiciona(agenda.jdbc.dao.ContatoDaoTest)  Time elapsed: 0.476 sec  <<< FAILURE!
+java.lang.AssertionError: expected:<201> but was:<0>
+	at agenda.jdbc.dao.ContatoDaoTest.testAdiciona(ContatoDaoTest.java:60)
+
