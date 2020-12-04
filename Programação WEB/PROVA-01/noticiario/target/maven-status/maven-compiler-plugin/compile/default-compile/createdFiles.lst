@@ -1,0 +1,4 @@
+com/noticiario/servlet/NoticiaServlet.class
+com/noticiario/jdbc/dao/NoticiaDao.class
+com/noticiario/jdbc/modelo/Noticia.class
+com/noticiario/jdbc/ConnectionFactory.class
