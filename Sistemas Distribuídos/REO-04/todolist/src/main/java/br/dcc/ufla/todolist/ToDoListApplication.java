@@ -1,5 +1,7 @@
 package br.dcc.ufla.todolist;
 
+import java.util.TimeZone;
+import javax.annotation.PostConstruct;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -24,4 +26,9 @@ public class ToDoListApplication {
                 }
             };
 	}
+        
+        @PostConstruct
+        void started() {
+            TimeZone.setDefault(TimeZone.getTimeZone("UTC"));
+        }
 }
