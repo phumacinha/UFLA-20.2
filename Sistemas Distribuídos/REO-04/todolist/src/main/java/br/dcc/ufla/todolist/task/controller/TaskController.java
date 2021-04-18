@@ -46,7 +46,7 @@ public class TaskController {
     }
     
     @GetMapping("/{id}")
-    public ResponseEntity<Task> getToDoItemById(@PathVariable("id") long id) {
+    public ResponseEntity<Task> getToDoItemById(@PathVariable("id") Long id) {
         Task toDoItem = taskService.findById(id);
         
         if (toDoItem != null) {
@@ -58,7 +58,7 @@ public class TaskController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity<HttpStatus> deleteToDoItem(@PathVariable("id") long id) {
+    public ResponseEntity<HttpStatus> deleteToDoItem(@PathVariable("id") Long id) {
         Task toDoItem = taskService.findById(id);
         
         if (toDoItem != null) {
@@ -71,7 +71,7 @@ public class TaskController {
     }
     
     @PutMapping("/{id}")
-    public ResponseEntity<Object> updateToDoItem(@PathVariable("id") long id, @RequestBody @Valid Task toDoItem, BindingResult result) {
+    public ResponseEntity<Object> updateToDoItem(@PathVariable("id") Long id, @RequestBody @Valid Task toDoItem, BindingResult result) {
         if (result.hasErrors()) {
             List<String> errors = result.getAllErrors().stream().map(e -> e.getDefaultMessage()).collect(Collectors.toList());
             return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
