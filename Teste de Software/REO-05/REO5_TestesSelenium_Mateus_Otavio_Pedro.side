@@ -1,0 +1,206 @@
+{
+  "id": "d045b5d8-5861-4d5a-9db3-2ea7e7dc640e",
+  "version": "2.0",
+  "name": "Testes REO 05",
+  "url": "http://www.dcc.ufla.br/",
+  "tests": [{
+    "id": "0383e51b-7fe9-47df-a008-ea28bae011c6",
+    "name": "reo05",
+    "commands": [{
+      "id": "bebc1d5b-5663-4fb6-9eef-cea83caf3f16",
+      "comment": "",
+      "command": "open",
+      "target": "http://www.dcc.ufla.br/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "156a9115-3cac-4340-b450-e3300423fe5a",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Pessoas",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b05fad64-cdac-4da9-b373-d6d745843f99",
+      "comment": "",
+      "command": "waitForElementVisible",
+      "target": "linkText=Professores",
+      "targets": [
+        ["linkText=Professores", "linkText"],
+        ["css=#menu-item-256 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Professores')]", "xpath:link"],
+        ["xpath=//li[@id='menu-item-256']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.dcc.ufla.br/?page_id=91']", "xpath:href"],
+        ["xpath=//li[6]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Professores')]", "xpath:innerText"]
+      ],
+      "value": "30000"
+    }, {
+      "id": "3077440a-4742-41b4-8e29-48390f036088",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Professores",
+      "targets": [
+        ["linkText=Professores", "linkText"],
+        ["css=#menu-item-256 > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Professores')]", "xpath:link"],
+        ["xpath=//li[@id='menu-item-256']/a", "xpath:idRelative"],
+        ["xpath=//a[@href='http://www.dcc.ufla.br/?page_id=91']", "xpath:href"],
+        ["xpath=//li[6]/ul/li[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Professores')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "63c963ba-921b-4a83-a53e-a652fc2081e5",
+      "comment": "Verificar nome Neumar",
+      "command": "assertText",
+      "target": "css=div:nth-child(26) tr:nth-child(1) > td",
+      "targets": [
+        ["css=div:nth-child(26) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[23]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//div[23]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Neumar Costa Malheiros ')]", "xpath:innerText"]
+      ],
+      "value": "Neumar Costa Malheiros"
+    }, {
+      "id": "5753f0b5-c598-4faf-b053-a4c565d9eb46",
+      "comment": "Verificar telefone Neumar",
+      "command": "assertText",
+      "target": "css=div:nth-child(26) tr:nth-child(4) > td",
+      "targets": [
+        ["css=div:nth-child(26) tr:nth-child(4) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[23]/table/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//div[23]/table/tbody/tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'   (35) 3829 1077')]", "xpath:innerText"]
+      ],
+      "value": "(35) 3829 1077"
+    }, {
+      "id": "24df4767-5280-418c-8f6e-6c079192306f",
+      "comment": "Verificar e-mail Neumar",
+      "command": "assertText",
+      "target": "css=div:nth-child(26) tr:nth-child(5) > td",
+      "targets": [
+        ["css=div:nth-child(26) tr:nth-child(5) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[23]/table/tbody/tr[5]/td", "xpath:idRelative"],
+        ["xpath=//div[23]/table/tbody/tr[5]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'  neumar[a]ufla.br')]", "xpath:innerText"]
+      ],
+      "value": "neumar[a]ufla.br"
+    }, {
+      "id": "ec8cfe98-4c4a-4940-b9cb-4b3170eee46d",
+      "comment": "Verificar doutorado Neumar",
+      "command": "assertText",
+      "target": "css=div:nth-child(26) li li",
+      "targets": [
+        ["css=div:nth-child(26) li li", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[23]/table/tbody/tr[6]/td/ul/li/ul/li", "xpath:idRelative"],
+        ["xpath=//div[23]/table/tbody/tr[6]/td/ul/li/ul/li", "xpath:position"]
+      ],
+      "value": "Doutorado em Ciência da Computação, Universidade Estadual de Campinas (UNICAMP), 2013."
+    }, {
+      "id": "ef0ca696-ff81-47ae-adf2-f84636652054",
+      "comment": "Verificar nome Terra",
+      "command": "assertText",
+      "target": "css=div:nth-child(32) tr:nth-child(1) > td",
+      "targets": [
+        ["css=div:nth-child(32) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[28]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//div[28]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Ricardo Terra')]", "xpath:innerText"]
+      ],
+      "value": "Ricardo Terra"
+    }, {
+      "id": "b4377207-8c09-4f8c-aa14-08cf72a344c8",
+      "comment": "Verificar telefone Terra",
+      "command": "assertText",
+      "target": "css=div:nth-child(32) tr:nth-child(4) > td",
+      "targets": [
+        ["css=div:nth-child(32) tr:nth-child(4) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[28]/table/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//div[28]/table/tbody/tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,' (35) 3829 – 1378')]", "xpath:innerText"]
+      ],
+      "value": "(35) 3829 – 1378"
+    }, {
+      "id": "a9091ec8-5ba9-4843-aba5-cf07413d0db5",
+      "comment": "Verificar e-mail Terra",
+      "command": "assertText",
+      "target": "css=div:nth-child(32) tr:nth-child(5) > td",
+      "targets": [
+        ["css=div:nth-child(32) tr:nth-child(5) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[28]/table/tbody/tr[5]/td", "xpath:idRelative"],
+        ["xpath=//div[28]/table/tbody/tr[5]/td", "xpath:position"],
+        ["xpath=//td[contains(.,' terra[a]ufla.br')]", "xpath:innerText"]
+      ],
+      "value": "terra[a]ufla.br"
+    }, {
+      "id": "3bb1875f-63fd-4922-8e88-23ed418aaea3",
+      "comment": "Verificar doutorado Terra",
+      "command": "assertText",
+      "target": "css=div:nth-child(32) li:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(32) li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[28]/table/tbody/tr[6]/td/ul/li", "xpath:idRelative"],
+        ["xpath=//div[28]/table/tbody/tr[6]/td/ul/li", "xpath:position"]
+      ],
+      "value": "Doutorado em Ciência da Computação, UFMG, 2013\\n(Período sanduíche na University of Waterloo, Canada)"
+    }, {
+      "id": "6b51fa51-ff0a-4a43-bafb-487a23f96a13",
+      "comment": "Verificar nome Thomaz",
+      "command": "assertText",
+      "target": "css=div:nth-child(35) tr:nth-child(1) > td",
+      "targets": [
+        ["css=div:nth-child(35) tr:nth-child(1) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[31]/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//div[31]/table/tbody/tr/td", "xpath:position"],
+        ["xpath=//td[contains(.,'Thomaz Chaves de Andrade Oliveira')]", "xpath:innerText"]
+      ],
+      "value": "Thomaz Chaves de Andrade Oliveira"
+    }, {
+      "id": "2fb9aa69-a21d-4272-8f21-7d3c298aa730",
+      "comment": "Verificar telefone Thomaz",
+      "command": "assertText",
+      "target": "css=div:nth-child(35) tr:nth-child(4) > td",
+      "targets": [
+        ["css=div:nth-child(35) tr:nth-child(4) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[31]/table/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//div[31]/table/tbody/tr[4]/td", "xpath:position"]
+      ],
+      "value": "(35) 3829 – 1086"
+    }, {
+      "id": "2641ec66-b47c-4976-8f3a-bde0bab7944e",
+      "comment": "Verificar e-mail Thomaz",
+      "command": "assertText",
+      "target": "css=div:nth-child(35) tr:nth-child(5) > td",
+      "targets": [
+        ["css=div:nth-child(35) tr:nth-child(5) > td", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[31]/table/tbody/tr[5]/td", "xpath:idRelative"],
+        ["xpath=//div[31]/table/tbody/tr[5]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'thomazchaves[a]ufla.br')]", "xpath:innerText"]
+      ],
+      "value": "thomazchaves[a]ufla.br"
+    }, {
+      "id": "50f48e6d-4b28-4099-9a88-1452c958f07e",
+      "comment": "Verificar doutorado Thomaz",
+      "command": "assertText",
+      "target": "css=div:nth-child(35) li:nth-child(1)",
+      "targets": [
+        ["css=div:nth-child(35) li:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='post-91']/div/div[31]/table/tbody/tr[6]/td/ul/li", "xpath:idRelative"],
+        ["xpath=//div[31]/table/tbody/tr[6]/td/ul/li", "xpath:position"],
+        ["xpath=//li[contains(.,'Doutorado em Engenharia Elétrica – Universidade Estadual de Campinas (2013)')]", "xpath:innerText"]
+      ],
+      "value": "Doutorado em Engenharia Elétrica – Universidade Estadual de Campinas (2013)"
+    }]
+  }],
+  "suites": [{
+    "id": "c3458b89-ef64-41c3-b7d1-4910a86bc788",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0383e51b-7fe9-47df-a008-ea28bae011c6"]
+  }],
+  "urls": ["http://www.dcc.ufla.br/"],
+  "plugins": []
+}
